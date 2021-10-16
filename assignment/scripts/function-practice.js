@@ -37,9 +37,11 @@ console.log(multiplyThree(1, 2, 3));
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+  else {
+    return false;
+  }
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
@@ -50,16 +52,32 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast( array ) {
-
+let array = [1, 2, 3]
+function getLast(a, b, c) {
+  if (a, b, c = true){
+    return array[array.length - 1];
+  }
+  else {
+    return;
+  }
 }
-
+console.log(getLast());
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
-
+let value = 3;
+function find(array, value) {
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === value){
+      return true;
+  }
+    else {
+      return false;//I can't figure this one out.  Not sure how to avoid the return breaking the loop.
+  }//I could make it console.log the desired result, but not return.
 }
+}
+console.log(find(array, value));
+
 
 // ----------------------
 // Stretch Goals
@@ -67,22 +85,35 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
+  if (letter === string[0]) {
+    return true;
+  }
+  else {
+    return false;
+  }
 
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll() {
   let sum = 0
+  for (let i = 0; i < array.length; i++){
+    sum += array[i];
+  }
   // TODO: loop to add items
   return sum;
 }
-
+console.log(sumAll());
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+function returnArray(array) {
+  if ([] > 0) {
+    return
+  }
+}
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
