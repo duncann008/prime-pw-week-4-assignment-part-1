@@ -66,18 +66,18 @@ console.log(getLast());
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 let value = 3;
+let i = 0;
 function find(array, value) {
-  for (let i = 0; i < array.length; i++){
     if (array[i] === value){
       return true;
   }
     else {
-      return false;//I can't figure this one out.  Not sure how to avoid the return breaking the loop.
-  }//I could make it console.log the desired result, but not return.
+      return false;
 }
 }
+for (i = 0; i < array.length; i++){
 console.log(find(array, value));
-
+}
 
 // ----------------------
 // Stretch Goals
@@ -109,13 +109,17 @@ console.log(sumAll());
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function returnArray(array) {
-  if ([] > 0) {
-    return
-  }
-}
-
-
+let positiveArray = array.filter(function(x){return x > 0});
+console.log(positiveArray);
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+//Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+let arr = [3,1,5,9,7]
+function minMax(arr) {
+	arr.sort();
+  let newArr =[arr[0], arr[arr.length - 1]];
+  return newArr;
+}
+console.log(minMax(arr)); //This was the best I could do with the knowledge I expect to have before due date.
+//Doesn't work with negative numbers.  I'm assuming .sort() doesn't account for negatives.
